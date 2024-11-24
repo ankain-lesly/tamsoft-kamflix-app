@@ -1,9 +1,9 @@
 "use client";
 
 import { faqsData } from "@/api/data-faq";
+import AccordionCard from "@/components/cards/accordion-card";
 import Link from "next/link";
 import React, { useState } from "react";
-import { BiPlus } from "react-icons/bi";
 
 export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -38,7 +38,7 @@ export default function FAQSection() {
           </div>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqsData.map((item, index) => (
-              <AccordionItem
+              <AccordionCard
                 key={index}
                 answer={item.answer}
                 question={item.question}
@@ -59,46 +59,5 @@ export default function FAQSection() {
         </div>
       </section>
     </>
-  );
-}
-
-interface PropsItem {
-  question: string;
-  answer: string;
-  activeIndex: number;
-  curIndex: number;
-  setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
-}
-export function AccordionItem({
-  question,
-  answer,
-  activeIndex,
-  curIndex,
-  setActiveIndex,
-}: PropsItem) {
-  return (
-    <div className="border-2 border-muted/20 rounded-xl overflow-hidden">
-      <div
-        onClick={() =>
-          setActiveIndex((prev) => (prev == curIndex ? -1 : curIndex))
-        }
-        className={`p-3 flex gap-2 justify-between bg-muted/10 ${
-          activeIndex == curIndex ? "border-b border-b-muted/20 " : ""
-        }`}>
-        <h4 className="text-lg font-semibold">{question}</h4>
-        <span
-          className={`shrink-0 transition-all duration-300 ${
-            activeIndex == curIndex ? "rotate-45" : ""
-          }`}>
-          <BiPlus fontSize={20} />
-        </span>
-      </div>
-      <div
-        className={`transition origin-top ${
-          activeIndex == curIndex ? "" : "h-0"
-        }`}>
-        <p className="p-3">{answer}</p>
-      </div>
-    </div>
   );
 }
