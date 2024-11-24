@@ -1,10 +1,11 @@
-import { getCurrentUser } from '@/lib/session'
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import Link from 'next/link'
+// import { getCurrentUser } from '@/lib/session'
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default async function ProfilePage() {
-  const user = await getCurrentUser()
+  // const user = await getCurrentUser()
+  const user: any = null;
 
   if (!user) {
     return (
@@ -14,7 +15,7 @@ export default async function ProfilePage() {
           <Link href="/login">Log In</Link>
         </Button>
       </div>
-    )
+    );
   }
 
   return (
@@ -42,6 +43,5 @@ export default async function ProfilePage() {
         </Button>
       </div>
     </div>
-  )
+  );
 }
-
