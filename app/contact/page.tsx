@@ -4,24 +4,25 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+// import { useToast } from "@/hooks/use-toast";
 // import { toast } from "@/components/ui/use-toast"
 
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const toast = useToast();
+  // const toast = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     // This is a placeholder implementation
     console.log({ name, email, message });
-    toast.toast({
-      title: "Message Sent",
-      description: "We've received your message and will get back to you soon.",
-    });
+    // toast.toast({
+    //   title: "Message Sent",
+    //   description: "We've received your message and will get back to you soon.",
+    // });
+    alert("We've received your message and will get back to you soon.");
     setName("");
     setEmail("");
     setMessage("");
