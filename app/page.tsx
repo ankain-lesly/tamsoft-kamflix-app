@@ -1,6 +1,5 @@
 "use client";
 
-import { Slider } from "./slider/slider";
 import { movieList, tvList } from "@/api/data-movie-library";
 import { useRouter } from "next/navigation";
 import { TrendingHero } from "@/components/wrappers/trending-hero";
@@ -8,6 +7,7 @@ import { Section } from "@/components/wrappers/section";
 import MovieCard, { MovieCardBig } from "@/components/cards/movie-card";
 import { mergeFilms } from "@/lib/utils";
 import Download from "@/components/pages/home/download";
+import { Slider } from "@/components/slider/slider";
 
 export default function Home() {
   const navigate = useRouter();
