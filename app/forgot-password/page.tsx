@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowRight, Film } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import {
   Card,
   CardContent,

@@ -1,11 +1,10 @@
-import React, { Dispatch, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
-import { BiListUl, BiX } from "react-icons/bi";
-import ModalOverlay from "../ui/modal-overlay";
 import ModalContentWrapper from "../ui/modal-content-wrapper";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Label } from "@radix-ui/react-label";
+
+// import { Label } from "@radix-ui/react-label";
 // import { ErrorState, LoadingState } from "../loaders/api-loaders";
 // import LazyLoadImage from "../loaders/lazy-load-image";
 type Props = ModalOptionTypes & {
@@ -14,26 +13,28 @@ type Props = ModalOptionTypes & {
 };
 
 const MovieSearchModal = (props: ModalOptionTypes) => {
-  const { data: profile, onComplete, closeModal } = props as Props;
+  // const { data: profile, onComplete, closeModal } = props as Props;
+  const data = props as Props;
   const inputRef = useRef<HTMLInputElement>(null);
-  const [search, setSearch] = useState<null | string>(null);
+  // const [search, setSearch] = useState<null | string>(null);
 
   // const { error, mutate, data, isPending, isSuccess } = useProductsLatest();
   // const { error, data, isLoading, isSuccess } = useSearchProduct(
   //   search ? "search=" + search : ""
   // );
 
+  console.log(data);
+
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
 
-  const handleSearch = () => {
-    const value = inputRef.current?.value.trim();
-    // console.log(value);
-    if (!value) return;
-
-    setSearch(value);
-  };
+  // const handleSearch = () => {
+  //   const value = inputRef.current?.value.trim();
+  //   // console.log(value);
+  //   if (!value) return;
+  //   setSearch(value);
+  // };
 
   // const result = search === null ? [] : ((data?.data ?? []) as ProductProps[]);
 

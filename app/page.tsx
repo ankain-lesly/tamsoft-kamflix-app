@@ -19,9 +19,10 @@ export default function Home() {
     alert("Getting Trailer for " + film.mediaType + " >> " + film.id);
   };
 
-  const goToDetailPage = (film: Film) => {
-    navigate.push(`/${film.mediaType}/${film.id}`);
-  };
+  // const goToDetailPage = (film: Film) => {
+  //   navigate.push(`/${film.mediaType}/${film.id}`);
+  // };
+
   return (
     <>
       {/* Hero Trending */}
@@ -57,7 +58,7 @@ export default function Home() {
       {/* BLOCK: Popular */}
       <Section title="What's Popular" hidden={false}>
         <Slider isMovieCard={true}>
-          {(_) =>
+          {() =>
             mergeFilms(movieList, tvList, 20).map((film, i) => (
               <MovieCardBig {...film} key={i} />
             ))
@@ -74,7 +75,7 @@ export default function Home() {
         hidden={false}
         onTitleClick={() => navigate.push(`/list/top-rated-tv`)}>
         <Slider isMovieCard={true}>
-          {(_) =>
+          {() =>
             tvList.map((film, i) => <MovieCard {...film} key={i}></MovieCard>)
           }
         </Slider>
@@ -85,9 +86,7 @@ export default function Home() {
         title="Top Rated Movies"
         onTitleClick={() => navigate.push(`/list/top-rated-movies`)}>
         <Slider isMovieCard={true}>
-          {(_) =>
-            movieList.map((film, i) => <MovieCardBig {...film} key={i} />)
-          }
+          {() => movieList.map((film, i) => <MovieCardBig {...film} key={i} />)}
         </Slider>
       </Section>
     </>

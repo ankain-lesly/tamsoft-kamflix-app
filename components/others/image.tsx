@@ -3,6 +3,7 @@ import ImageTag from "next/image";
 
 interface Props extends CustomComponentProps {
   src: StaticImageData;
+  alt?: string;
 }
 
 export const Image = (props: Props) => {

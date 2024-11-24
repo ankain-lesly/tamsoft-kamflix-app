@@ -1,16 +1,17 @@
 "use client";
+
 import { Section } from "@/components/wrappers/section";
 import { movieList } from "@/api/data-movie-library";
 import { MovieCardBig } from "@/components/cards/movie-card";
 import { useParams } from "next/navigation";
 
-async function getTrendingMovies() {
-  // Fetch trending movies from your API
-  // This is a placeholder implementation
-  const res = await fetch("https://api.example.com/movies/trending");
-  if (!res.ok) return [];
-  return res.json();
-}
+// async function getTrendingMovies() {
+//   // Fetch trending movies from your API
+//   // This is a placeholder implementation
+//   const res = await fetch("https://api.example.com/movies/trending");
+//   if (!res.ok) return [];
+//   return res.json();
+// }
 
 // export default async function SingleGenre() {
 export default function SingleGenre() {

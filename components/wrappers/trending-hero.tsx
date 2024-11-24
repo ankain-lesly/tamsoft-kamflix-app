@@ -21,6 +21,7 @@ export const TrendingHero = (props: Props) => {
           <div className="overlay-slick-hero"></div>
           <Image
             src={props.film.coverPath}
+            alt="some key"
             className="rounded-0 rounded-none"
           />
           <div className="overlay-film-cover"></div>

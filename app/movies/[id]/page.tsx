@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+// import { notFound } from "next/navigation";
 import MovieInfo from "@/components/movie-info";
 import { movieList } from "@/api/data-movie-library";
 import { Images1, Images1a } from "@/public/assets";
@@ -7,13 +7,13 @@ import { MovieCardBig } from "@/components/cards/movie-card";
 // import MovieReviews from '@/components/movie-reviews'
 // import MovieTrailers from '@/components/movie-trailers'
 
-async function getMovie(id: string) {
-  // Fetch movie data from your API
-  // This is a placeholder implementation
-  const res = await fetch(`https://api.example.com/movies/${id}`);
-  if (!res.ok) return undefined;
-  return res.json();
-}
+// async function getMovie(id: string) {
+//   // Fetch movie data from your API
+//   // This is a placeholder implementation
+//   const res = await fetch(`https://api.example.com/movies/${id}`);
+//   if (!res.ok) return undefined;
+//   return res.json();
+// }
 
 // export default async function MoviePage({
 export default function MoviePage({ params }: { params: { id: string } }) {
@@ -22,6 +22,8 @@ export default function MoviePage({ params }: { params: { id: string } }) {
   // if (!movie) {
   //   notFound();
   // }
+
+  console.log(params);
 
   const movie = {
     id: "string",

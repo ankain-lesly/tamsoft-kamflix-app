@@ -1,6 +1,6 @@
 import { MdPlayCircleFilled } from "react-icons/md";
 // import { Image } from "../others/image";
-import { StaticImageData } from "next/image";
+// import { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
 import { Star } from "lucide-react";

@@ -19,12 +19,12 @@ export default function AboutPage() {
         <h2>Our Team</h2>
         <p>
           Kamflix is brought to you by a passionate team of film lovers and tech
-          enthusiasts. We're dedicated to creating the best possible platform
-          for movie discovery and appreciation.
+          enthusiasts. We&apos;re dedicated to creating the best possible
+          platform for movie discovery and appreciation.
         </p>
         <h2>Contact Us</h2>
         <p>
-          Have questions or feedback? We'd love to hear from you! Visit our{" "}
+          Have questions or feedback? We&apos;d love to hear from you! Visit our{" "}
           <a href="/contact">Contact Us</a> page to get in touch with our team.
         </p>
       </div>
