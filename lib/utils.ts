@@ -1,6 +1,34 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
+
+// Local Movies
+
+export const mergeFilms = (movies: Film[], tvs: Film[], limit = 6) => {
+  const arrs: Film[] = [];
+
+  for (let i = 0; i < limit; i++) {
+    let film: unknown;
+
+    if (i % 2 == 1) {
+      if (tvs[i - 1]) {
+        film = tvs[i - 1];
+      }
+    } else {
+      if (movies[i - 1]) {
+        film = tvs[i - 1];
+      }
+    }
+
+    if (isFilm(film)) arrs.push(film);
+  }
+
+  return arrs;
+};
+
+export const isFilm = (film: any): film is Film => {
+  return <Film>film !== undefined;
+};

@@ -94,6 +94,12 @@ module.exports = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+
+        // primary: "#423F71",
+        header: "#292841",
+        body: "#1C1B29",
+        bg: "#1f2937",
+        main: "#f20",
       },
       boxShadow: {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",

@@ -7,7 +7,7 @@ interface PropsScreen {
   ngClass?: string;
   style?: object;
 }
-export const ScreenWrapper = ({
+export const Container = ({
   className = "",
   children,
   idName = "",

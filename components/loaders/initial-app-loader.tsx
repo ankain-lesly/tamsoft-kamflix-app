@@ -1,7 +1,7 @@
 // import AppSVGLogo from "../../assets/app-logo";
 // import { AnimatePresence, motion } from "framer-motion";
 
-import { AppLogo } from "@/public";
+import { AppLogo } from "@/public/assets";
 import Image from "next/image";
 
 export default function InitialPageLoader() {
@@ -27,8 +27,8 @@ export default function InitialPageLoader() {
         />
       </div>
       <div className="labels text-center text-light absolute w-full bottom-4">
-        <h5 className="text-danger">NotLedia</h5>
-        <p className="text-xs font-bold text-muted">Make Notes Prettier</p>
+        <h5 className="text-danger">Kamflix</h5>
+        <p className="text-xs font-bold text-muted">Stream Like A Producer</p>
       </div>
     </div>
     // </motion.div>
