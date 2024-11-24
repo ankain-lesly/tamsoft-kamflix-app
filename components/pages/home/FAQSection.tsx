@@ -1,6 +1,6 @@
 "use client";
 
-import { faqsData } from "@/app/faq/page";
+import { faqsData } from "@/api/data-faq";
 import Link from "next/link";
 import React, { useState } from "react";
 import { BiPlus } from "react-icons/bi";
