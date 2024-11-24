@@ -1,5 +1,6 @@
 "use client";
 
+import { faqsData } from "@/app/faq/page";
 import Link from "next/link";
 import React, { useState } from "react";
 import { BiPlus } from "react-icons/bi";
@@ -36,24 +37,11 @@ export default function FAQSection() {
             </h2>
           </div>
           <div className="max-w-3xl mx-auto space-y-4">
-            {[
-              {
-                q: "How does NotLedia's AI enhance my notes?",
-                a: "NotLedia's AI analyzes your input, structures it, and provides additional insights and connections you might have missed.",
-              },
-              {
-                q: "Is my data safe with NotLedia's AI processing?",
-                a: "Yes, we use state-of-the-art encryption and anonymization techniques to ensure your data remains private and secure.",
-              },
-              {
-                q: "Can I use NotLedia offline?",
-                a: "Yes, you can create notes offline. NotLedia's AI features will sync and process your notes when you're back online.",
-              },
-            ].map((item, index) => (
+            {faqsData.map((item, index) => (
               <AccordionItem
                 key={index}
-                answer={item.a}
-                question={item.q}
+                answer={item.answer}
+                question={item.question}
                 activeIndex={activeIndex}
                 curIndex={index}
                 setActiveIndex={setActiveIndex}

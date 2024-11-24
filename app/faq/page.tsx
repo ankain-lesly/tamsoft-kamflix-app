@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { BiPlus } from "react-icons/bi";
 
-const faqs = [
+export const faqsData = [
   {
     question: "What is Kamflix?",
     answer:
@@ -30,6 +30,7 @@ const faqs = [
       "To write a review, go to the movie's detail page and scroll down to the 'Reviews' section. Click on 'Write a Review' and you'll be prompted to rate the movie and write your thoughts. Remember to follow our community guidelines when writing reviews.",
   },
 ];
+
 export default function FAQPage() {
   const [activeIndex, setActiveIndex] = useState(-1);
 
@@ -62,7 +63,7 @@ export default function FAQPage() {
             </h2>
           </div>
           <div className="max-w-3xl mx-auto space-y-4">
-            {faqs.map((item, index) => (
+            {faqsData.map((item, index) => (
               <AccordionItem
                 key={index}
                 answer={item.answer}
@@ -86,13 +87,14 @@ interface PropsItem {
   curIndex: number;
   setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
 }
-export function AccordionItem({
+
+export const AccordionItem = ({
   question,
   answer,
   activeIndex,
   curIndex,
   setActiveIndex,
-}: PropsItem) {
+}: PropsItem) => {
   return (
     <div className="border-2 border-muted/20 rounded-xl overflow-hidden">
       <div
@@ -118,4 +120,4 @@ export function AccordionItem({
       </div>
     </div>
   );
-}
+};

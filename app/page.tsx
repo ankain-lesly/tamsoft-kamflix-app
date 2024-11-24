@@ -8,6 +8,7 @@ import MovieCard, { MovieCardBig } from "@/components/cards/movie-card";
 import { mergeFilms } from "@/lib/utils";
 import Download from "@/components/pages/home/download";
 import { Slider } from "@/components/slider/slider";
+import FAQSection from "@/components/pages/home/FAQSection";
 
 export default function Home() {
   const navigate = useRouter();
@@ -89,6 +90,8 @@ export default function Home() {
           {() => movieList.map((film, i) => <MovieCardBig {...film} key={i} />)}
         </Slider>
       </Section>
+      {/* Accordion */}
+      <FAQSection />
     </>
   );
 }
