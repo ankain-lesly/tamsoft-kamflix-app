@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "next/typescript"
+    // "eslint:recommended"
+  ],
+  "rules": {
+    // "react-refresh/only-export-components": [
+    //   "warn",
+    //   { "allowConstantExport": true }
+    // ],
+    // "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-explicit-any": "off"
+    // "react/no-unescaped-entities": "off",
+    // "@next/next/no-page-custom-font": "off"
+  }
+}
